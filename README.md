@@ -3,7 +3,7 @@
 A modern, responsive personal portfolio website built with **pure HTML, CSS, and JavaScript** (no frameworks). Showcases my ML/AI projects, skills, and contact details.
 
 ## 🌐 Live Demo
-
+[Visit My Portfolio](my-portfolio-sigma-one-56.vercel.app)
 
 ## 📁 Project Structure
 
