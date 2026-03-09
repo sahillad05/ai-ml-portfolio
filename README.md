@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website built with **pure HTML, CSS, and
 
 ## 🌐 Live Demo
 
-> 
+🔗 [my-portfolio-sigma-one-56.vercel.app](https://my-portfolio-sigma-one-56.vercel.app)
 
 ## 📁 Project Structure
 
@@ -24,8 +24,6 @@ my-portpolio/
     ├── gan-anime-face.html
     └── ai-github-developer-analyzer.html
 ```
-
-> **Note:** `images/profile_photo.jpg` and `my_resume.pdf` are listed in `.gitignore` to keep personal files private. Add them manually after cloning.
 
 ## ✨ Features
 
