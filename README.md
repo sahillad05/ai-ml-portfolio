@@ -4,7 +4,6 @@ A modern, responsive personal portfolio website built with **pure HTML, CSS, and
 
 ## 🌐 Live Demo
 
-🔗 [my-portfolio-sigma-one-56.vercel.app](https://my-portfolio-sigma-one-56.vercel.app)
 
 ## 📁 Project Structure
 
