@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Air Quality Forecasting System – Deep Learning project by Sahil Lad" />
+    <title>Air Quality Forecasting System | Sahil Lad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+    <nav id="navbar" class="navbar scrolled">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <a href="../index.html#projects" class="btn btn-secondary" style="padding:10px 20px;font-size:0.85rem;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="proj-hero">
+        <div class="floating-shapes">
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container proj-hero-inner">
+            <div class="proj-badge-row">
+                <span class="tag">Pandas </span>
+                <span class="tag">NumPy </span>
+                <span class="tag">Scikit-learn</span>
+            </div>
+            <h1 class="proj-title">AI GitHub<br /><span class="gradient-text">Developer Analyzer</span></h1>
+            <p class="proj-subtitle">
+                An intelligent web application that uses Machine Learning to automatically evaluate software engineers
+                based on their public GitHub profile — predicting seniority level and computing a 0–100 hireability
+                score in seconds.
+            </p>
+            <div class="proj-actions">
+                <a href="https://github.com/sahillad05/ai-github-developer-analyzer" class="btn btn-primary"
+                    target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+                <a href="#overview" class="btn btn-secondary">
+                    <i class="fa-solid fa-eye"></i> Read More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="proj-content" id="overview">
+        <div class="container proj-grid">
+            <div class="proj-main">
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-circle-info"></i> Project Overview</h2>
+                    <p>
+                        The AI GitHub Developer Analyzer is a full-stack, portfolio-grade application designed to help
+                        recruiters and engineering managers make data-driven hiring decisions. By simply entering a
+                        GitHub username, the system fetches all public repository data via the GitHub REST API and runs
+                        it through a machine learning pipeline — delivering an instant, objective assessment of a
+                        developer's experience level.
+                    </p>
+                    <p>
+                        The backend is powered by a FastAPI server that orchestrates a multi-stage data pipeline:
+                        extracting raw repository metrics (stars, forks, followers, language diversity), computing
+                        derived features like follower ratios and documentation quality scores, and feeding the final
+                        feature vector into a pre-trained Random Forest classification model for real-time inference.
+                    </p>
+                    <p>
+                        The frontend is a high-performance, pure Vanilla HTML/CSS/JS application styled with a modern
+                        glassmorphism dark theme. It visualizes the prediction results on a dynamic dashboard —
+                        including a circular hireability gauge, a Chart.js doughnut chart for technology stack
+                        breakdown, and actionable AI-generated improvement suggestions tailored to the developer's
+                        specific profile metrics.
+                    </p>
+                </div>
+
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-star"></i> Key Features</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle"></i> Multi-variate LSTM with attention mechanism for
+                            72-hour ahead forecasting</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Integration of 8 pollutant features (PM2.5, PM10,
+                            NO2, SO2, O3, CO, temperature, humidity)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Automated data ingestion pipeline from OpenAQ API
+                            (real-time sensor data)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Sliding window dataset construction with
+                            configurable look-back window</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Comparison baseline: ARIMA, SARIMA, Prophet, Linear
+                            Regression</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Interactive Plotly dashboard with city-level
+                            forecast visualisations</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Health advisory alert system based on WHO AQI
+                            thresholds</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Uncertainty quantification via Monte Carlo Dropout
+                            inference</li>
+                    </ul>
+                </div>
+
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-flask"></i> Technical Approach</h2>
+                    <p>
+                        The feature engineering pipeline extracts 9 key numerical features from the GitHub API response:
+                        public_repos, followers, following, total_stars, average_stars, total_forks,
+                        tech_diversity_score, documentation_score, and a derived follower_ratio. These features are
+                        carefully selected to capture both the quantity and quality of a developer's open-source
+                        presence.
+                    </p>
+                    <p>
+                        The classification model is a Random Forest Classifier trained on 2,000 synthetically generated
+                        developer profiles using sklearn. The synthetic dataset was constructed with statistically
+                        realistic feature distributions for each seniority tier, using numpy with a fixed random seed
+                        (42) to ensure reproducibility. The model was trained on an 80/20 train-test split and achieves
+                        high accuracy for standard GitHub profiles.
+                    </p>
+                    <p>
+                        The hireability score is computed by a custom weighted scoring engine that runs independently of
+                        the ML model. It distributes 100 points across four categories: Repository Popularity (40pts —
+                        stars & forks), Activity & Volume (30pts — repo count & followers), Technology Diversity
+                        (15pts), and Documentation Quality (15pts). Caps are applied at each bucket to prevent viral
+                        outlier repositories from skewing the final score.
+                    </p>
+                </div>
+            </div>
+
+            <aside class="proj-sidebar">
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Project Info</h3>
+                    <div class="info-row"><span class="info-label">Status</span><span
+                            class="badge-green">Completed</span></div>
+                    <div class="info-row"><span class="info-label">Type</span><span>Classification · ML</span></div>
+                    <div class="info-row"><span class="info-label">Training Data</span><span>Synthetically
+                            Generated</span></div>
+                    <div class="info-row"><span class="info-label">Year</span><span>2026</span></div>
+                </div>
+
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Technologies</h3>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Python 3.11</span>
+                        <span class="tech-pill">Scikit-learn</span>
+                        <span class="tech-pill">Random Forest</span>
+                        <span class="tech-pill">FastAPI </span>
+                        <span class="tech-pill">Pandas</span>
+                        <span class="tech-pill">NumPy</span>
+                        <span class="tech-pill">Uvicorn </span>
+                        <span class="tech-pill">Chart.js</span>
+                        <span class="tech-pill">HTML/CSS/JS</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/sahillad05/ai-github-developer-analyzer"
+                    class="btn btn-primary btn-full reveal" target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </div>
+            <p class="footer-copy">
+                &copy; 2026 <span class="gradient-text">Sahil Lad</span>. Built with ❤️ using HTML, CSS & JavaScript.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/sahillad05" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sahil-lad-046b58271/" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com" aria-label="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

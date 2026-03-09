@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Smart Agriculture Crop Prediction – ML project by Sahil Lad" />
+    <title>Smart Agriculture Crop Prediction | Sahil Lad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar scrolled">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <a href="../index.html#projects" class="btn btn-secondary" style="padding:10px 20px;font-size:0.85rem;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PROJECT HERO -->
+    <section class="proj-hero">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container proj-hero-inner">
+            <div class="proj-badge-row">
+                <span class="tag">ML</span>
+                <span class="tag">Agriculture</span>
+                <span class="tag">Scikit-learn</span>
+            </div>
+            <h1 class="proj-title">Smart Agriculture<br /><span class="gradient-text">Crop Prediction</span></h1>
+            <p class="proj-subtitle">
+                An intelligent system that predicts the most optimal crop for a given region
+                using soil parameters, climate data, and ensemble machine learning models.
+            </p>
+            <div class="proj-actions">
+                <a href="https://github.com/sahillad05/smart-agriculture-api" class="btn btn-primary" target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+                <a href="#overview" class="btn btn-secondary">
+                    <i class="fa-solid fa-eye"></i> Read More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main class="proj-content" id="overview">
+        <div class="container proj-grid">
+
+            <!-- LEFT: Main Detail -->
+            <div class="proj-main">
+
+                <!-- Overview -->
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-circle-info"></i> Project Overview</h2>
+                    <p>
+                        The Smart Agriculture Recommendation API is an AI-powered backend system designed to assist
+                        farmers and agricultural analysts in making data-driven agricultural decisions. The project
+                        integrates machine learning and deep learning models into a unified REST API that provides
+                        intelligent recommendations related to crop selection, fertilizer usage, crop yield estimation,
+                        and plant disease detection.
+                    </p>
+                    <p>
+                        The system leverages multiple datasets and machine learning techniques to analyze soil
+                        nutrients, environmental conditions, and crop characteristics. Based on these inputs, the API
+                        predicts the most suitable crop, estimates potential agricultural yield, and recommends
+                        appropriate fertilizers. Additionally, the project includes a deep learning model capable of
+                        detecting plant diseases from leaf images.
+                    </p>
+                    <p>
+                        The project was built with a modular backend architecture using FastAPI, allowing machine
+                        learning models to be exposed as scalable API endpoints. It demonstrates the practical
+                        integration of data science, computer vision, and backend engineering to build a real-world AI
+                        system for agricultural decision support.
+                    </p>
+                </div>
+
+                <!-- Features -->
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-star"></i> Key Features</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle"></i> Crop recommendation based on soil nutrients and
+                            environmental conditions</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Crop yield prediction using machine learning
+                            regression models</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Fertilizer recommendation based on soil nutrient
+                            composition</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Plant disease detection from leaf images using a
+                            convolutional neural network</li>
+                        <li><i class="fa-solid fa-check-circle"></i> RESTful API architecture built with FastAPI</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Modular backend design with separate routes,
+                            services, and schemas</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Automatic API documentation using Swagger UI</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Machine learning models trained using Scikit-learn
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Description -->
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-flask"></i> Technical Approach</h2>
+                    <p>
+                        The project follows a modular machine learning pipeline where each agricultural task is
+                        implemented as an independent model integrated into a centralized API system. Structured
+                        datasets containing soil nutrients, rainfall, temperature, and crop information were used to
+                        train machine learning models for crop recommendation and yield prediction.
+                    </p>
+                    <p>
+                        For tabular prediction tasks, traditional machine learning algorithms such as Random Forest and
+                        gradient boosting models were used due to their strong performance on structured agricultural
+                        datasets. These models were trained using Scikit-learn and optimized to predict crop suitability
+                        and agricultural yield based on environmental conditions.
+                    </p>
+                    <p>
+                        For plant disease detection, a convolutional neural network was developed using PyTorch to
+                        classify plant diseases from leaf images. The model processes input images through multiple
+                        convolutional layers to extract visual patterns associated with plant diseases. The trained
+                        model achieved strong validation performance and was integrated into the API to provide
+                        real-time image-based disease detection.
+                    </p>
+                </div>
+
+            </div><!-- /proj-main -->
+
+            <!-- RIGHT: Sidebar -->
+            <aside class="proj-sidebar">
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Project Info</h3>
+                    <div class="info-row"><span class="info-label">Status</span><span
+                            class="badge-green">Completed</span></div>
+                    <div class="info-row"><span class="info-label">Type</span><span>Classification · ML</span></div>
+                    <div class="info-row">
+                        <span class="info-label">Dataset 1</span>
+                        <a href="https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset"
+                            target="_blank" class="dataset-link">Crop Recommendation</a>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Dataset 2</span>
+                        <a href="https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset" target="_blank"
+                            class="dataset-link">Crop Yield Prediction</a>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Dataset 3</span>
+                        <a href="https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset" target="_blank"
+                            class="dataset-link">Plant Disease</a>
+                    </div>
+                    <div class="info-row"><span class="info-label">Year</span><span>2026</span></div>
+                </div>
+
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Technologies</h3>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Python 3.10</span>
+                        <span class="tech-pill">Scikit-learn</span>
+                        <span class="tech-pill">Random Forest</span>
+                        <span class="tech-pill">XGBoost</span>
+                        <span class="tech-pill">Pandas</span>
+                        <span class="tech-pill">NumPy</span>
+                        <span class="tech-pill">PyTorch</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">Streamlit</span>
+
+                    </div>
+                </div>
+
+                <a href="https://github.com/sahillad05/smart-agriculture-api" class="btn btn-primary btn-full reveal"
+                    target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </aside>
+
+        </div><!-- /proj-grid -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </div>
+            <p class="footer-copy">
+                &copy; 2026 <span class="gradient-text">Sahil Lad</span>. Built with ❤️ using HTML, CSS & JavaScript.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/sahillad05" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sahil-lad-046b58271/" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com" aria-label="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

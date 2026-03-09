@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sahil Lad – ML Engineer & AI Developer. Explore projects in Machine Learning, Deep Learning, Computer Vision, and Data Science." />
+  <title>Sahil Lad | ML Engineer & AI Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════════════ -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <i class="fa-solid fa-brain logo-icon"></i>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
+          </button>
+        </li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <!-- Canvas Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Floating 3D Shapes -->
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+
+    <div class="hero-content" data-parallax="0.3">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name">
+        Hi, I'm <span class="gradient-text">Sahil Lad</span>
+      </h1>
+
+      <div class="hero-title-wrapper">
+        <span class="hero-title-static">I'm a&nbsp;</span>
+        <span id="typing-text" class="hero-title-typed"></span>
+        <span class="cursor">|</span>
+      </div>
+
+      <p class="hero-description">
+        Passionate about building intelligent systems that solve real-world problems.
+        I specialise in Machine Learning and Deep Learning —
+        turning complex data into actionable insights.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-rocket"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fa-solid fa-envelope"></i> Contact Me
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">ML Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">MSc</span>
+          <span class="stat-label">Data Science</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Years Coding</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Profile -->
+        <div class="about-left reveal">
+          <div class="profile-card">
+            <div class="profile-img-wrapper">
+              <div class="profile-img-placeholder">
+                <img src="images\profile_photo.jpg" alt="Sahil Lad"
+                  style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+              </div>
+              <div class="profile-ring"></div>
+              <div class="profile-ring profile-ring-2"></div>
+            </div>
+            <div class="profile-info">
+              <h3 class="profile-name">Sahil Lad</h3>
+              <p class="profile-role">ML Engineer & AI Developer</p>
+              <p class="profile-location"><i class="fa-solid fa-location-dot"></i> Mumbai, India</p>
+              <p class="profile-edu"><i class="fa-solid fa-graduation-cap"></i> MSc Data Science</p>
+              <a href="my_resume.pdf" target="_blank" rel="noopener" class="resume-btn">
+                <i class="fa-solid fa-file-pdf"></i> View Resume
+              </a>
+            </div>
+
+            <div class="profile-socials">
+              <a href="https://github.com/sahillad05" target="_blank" class="social-link" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="www.linkedin.com/in/sahil-lad-046b58271" target="_blank" class="social-link"
+                aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com" class="social-link"
+                aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Bio + Skills -->
+        <div class="about-right reveal">
+          <p class="about-bio">
+            I'm an passionate Data Science postgraduate student currently pursuing an MSc in <strong>Data
+              Science</strong>
+            after completing my BSc in <strong>Information Technology</strong>. I have a strong interest in
+            <strong>Machine Learning, Artificial
+              Intelligence, and Data Analysis</strong>, and I enjoy building practical projects that solve real-world
+            problems. My
+            work focuses on applying data-driven techniques to develop intelligent systems, such as prediction models,
+            AI-based ranking systems, and data-driven decision tools.
+          </p>
+
+          <p class="about-bio">
+            I have hands-on experience with Python, Scikit-learn, Random Forest, XGBoost, data analysis libraries, and
+            GitHub for version control. I enjoy building machine learning models, improving their performance, and
+            developing practical data-driven solutions while continuously learning new tools in the AI and Machine
+            Learning ecosystem.
+          </p>
+
+          <!-- Skills -->
+          <div class="skills-section">
+            <h3 class="skills-title">Core Skills</h3>
+            <div class="skill-chips">
+              <div class="skill-chip">
+                <span class="skill-chip-icon"><i class="fa-brands fa-python"></i></span>
+                <span>Python</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-chip-icon"><i class="fa-solid fa-brain"></i></span>
+                <span>Machine Learning</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-chip-icon"><i class="fa-solid fa-network-wired"></i></span>
+                <span>Deep Learning</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-chip-icon"><i class="fa-solid fa-eye"></i></span>
+                <span>Computer Vision</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-chip-icon"><i class="fa-solid fa-chart-column"></i></span>
+                <span>Data Science</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-chip-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+                <span>Data Analysis</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-chip-icon"><i class="fa-solid fa-comment-dots"></i></span>
+                <span>NLP</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-chip-icon"><i class="fa-solid fa-chart-pie"></i></span>
+                <span>Data Visualisation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Cards -->
+      <div class="tech-stack reveal">
+        <h3 class="tech-title">Tech Stack</h3>
+        <div class="tech-grid">
+          <div class="tech-card" data-tilt>
+            <i class="fa-brands fa-python tech-icon"></i>
+            <span>Python</span>
+          </div>
+          <div class="tech-card" data-tilt>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+              alt="TensorFlow" class="tech-img" />
+            <span>TensorFlow</span>
+          </div>
+          <div class="tech-card" data-tilt>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"
+              class="tech-img" />
+            <span>Pandas</span>
+          </div>
+          <div class="tech-card" data-tilt>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" alt="Anaconda"
+              class="tech-img" />
+            <span>Anaconda</span>
+          </div>
+          <div class="tech-card" data-tilt>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
+              alt="Scikit-learn" class="tech-img" />
+            <span>Scikit-learn</span>
+          </div>
+          <div class="tech-card" data-tilt>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV"
+              class="tech-img" />
+            <span>OpenCV</span>
+          </div>
+          <div class="tech-card" data-tilt>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg"
+              alt="Google Colab" class="tech-img" />
+            <span>Google Colab</span>
+          </div>
+          <div class="tech-card" data-tilt>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter"
+              class="tech-img" />
+            <span>Jupyter</span>
+          </div>
+          <div class="tech-card" data-tilt>
+            <i class="fa-brands fa-github tech-icon"></i>
+            <span>GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A selection of my machine learning and AI projects</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap">
+              <i class="fa-solid fa-seedling card-icon"></i>
+            </div>
+            <div class="card-tags">
+              <span class="tag">ML</span>
+              <span class="tag">Agriculture</span>
+            </div>
+          </div>
+          <h3 class="card-title">Smart Agriculture Crop Prediction</h3>
+          <p class="card-desc">
+            An intelligent system that predicts optimal crops based on soil parameters,
+            climate data, and satellite imagery using ensemble ML models.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">Random Forest</span>
+            <span class="tech-tag">Pandas</span>
+          </div>
+          <div class="card-footer">
+            <a href="projects/smart-agriculture.html" class="btn-card">
+              View Details <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#" class="btn-card-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap">
+              <i class="fa-solid fa-file-lines card-icon"></i>
+            </div>
+            <div class="card-tags">
+              <span class="tag">NLP</span>
+              <span class="tag">AI</span>
+            </div>
+          </div>
+          <h3 class="card-title">AI Resume Ranking System</h3>
+          <p class="card-desc">
+            An NLP-powered system that automatically ranks resumes against job descriptions
+            using transformer models and semantic similarity scoring.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">BERT</span>
+            <span class="tech-tag">spaCy</span>
+            <span class="tech-tag">FastAPI</span>
+          </div>
+          <div class="card-footer">
+            <a href="projects/ai-resume-ranking.html" class="btn-card">
+              View Details <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#" class="btn-card-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap">
+              <i class="fa-solid fa-chart-line card-icon"></i>
+            </div>
+            <div class="card-tags">
+              <span class="tag">ML</span>
+              <span class="tag">Business</span>
+            </div>
+          </div>
+          <h3 class="card-title">Bank Customer Churn Prediction</h3>
+          <p class="card-desc">
+            A predictive analytics solution for identifying at-risk customers using
+            gradient boosting and SHAP explainability for business insights.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">XGBoost</span>
+            <span class="tech-tag">SHAP</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
+          <div class="card-footer">
+            <a href="projects/customer-churn.html" class="btn-card">
+              View Details <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#" class="btn-card-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap">
+              <i class="fa-brands fa-github card-icon"></i>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+            </div>
+          </div>
+          <h3 class="card-title">AI GitHub Developer Analyzer</h3>
+          <p class="card-desc">
+            An intelligent web application that uses Machine Learning to automatically evaluate software engineers based
+            on their public GitHub profile — predicting seniority level and computing a 0–100 hireability score in
+            seconds.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">NumPy</span>
+          </div>
+          <div class="card-footer">
+            <a href="projects/ai-github-developer-analyzer.html" class="btn-card">
+              View Details <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#" class="btn-card-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap">
+              <i class="fa-solid fa-star card-icon"></i>
+            </div>
+            <div class="card-tags">
+              <span class="tag">GAN</span>
+              <span class="tag">Deep Learning</span>
+            </div>
+          </div>
+          <h3 class="card-title">GAN Anime Face Generator</h3>
+          <p class="card-desc">
+            A Generative Adversarial Network that creates high-quality anime face images,
+            trained on a large dataset with progressive growing techniques.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">GAN</span>
+            <span class="tech-tag">CNN</span>
+            <span class="tech-tag">CUDA</span>
+          </div>
+          <div class="card-footer">
+            <a href="projects/gan-anime-face.html" class="btn-card">
+              View Details <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#" class="btn-card-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Have a project in mind? Let's build something amazing together.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com">sahillad77@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/sahil-lad-046b58271/">linkedin.com/in/sahillad</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/sahillad05">github.com/sahillad05</a>
+            </div>
+          </div>
+
+          <!-- Availability -->
+          <div class="availability-card">
+            <div class="avail-dot"></div>
+            <div>
+              <strong>Open to Work</strong>
+              <p>ML Engineer & AI Developer roles</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap reveal">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="send-btn">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <i class="fa-solid fa-brain logo-icon"></i>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 <span class="gradient-text">Sahil Lad</span>. Built with ❤️ using HTML, CSS & JavaScript.
+      </p>
+      <div class="footer-socials">
+        <a href="https://github.com/sahillad05" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sahil-lad-046b58271/" aria-label="LinkedIn"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com" aria-label="Email"><i
+            class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

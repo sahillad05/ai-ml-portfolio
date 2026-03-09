@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI Resume Ranking System – NLP project by Sahil Lad" />
+    <title>AI Resume Ranking System | Sahil Lad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+    <nav id="navbar" class="navbar scrolled">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <a href="../index.html#projects" class="btn btn-secondary" style="padding:10px 20px;font-size:0.85rem;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="proj-hero">
+        <div class="floating-shapes">
+            <div class="shape shape-2"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="container proj-hero-inner">
+            <div class="proj-badge-row">
+                <span class="tag">NLP</span>
+                <span class="tag">AI</span>
+            </div>
+            <h1 class="proj-title">AI Resume<br /><span class="gradient-text">Ranking System</span></h1>
+            <p class="proj-subtitle">
+                An NLP-powered recruitment automation tool that semantically matches and ranks
+                candidate resumes against job descriptions using transformer-based models.
+            </p>
+            <div class="proj-actions">
+                <a href="https://github.com/sahillad05/ai-resume-ranking-system" class="btn btn-primary"
+                    target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+                <a href="#overview" class="btn btn-secondary">
+                    <i class="fa-solid fa-eye"></i> Read More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="proj-content" id="overview">
+        <div class="container proj-grid">
+            <div class="proj-main">
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-circle-info"></i> Project Overview</h2>
+                    <p>
+                        The AI Resume Screening & Ranking System is a machine learning–powered Applicant Tracking System
+                        (ATS) designed to assist recruiters in automatically analyzing and ranking job applicants based
+                        on their resumes. The system processes uploaded resumes, extracts relevant information, and
+                        predicts the most suitable job category using trained classification models. This helps automate
+                        the early stages of recruitment and significantly reduces manual resume screening efforts.
+                    </p>
+                    <p>
+                        In addition to classification, the system implements an intelligent resume ranking mechanism
+                        that compares multiple resumes against a given job description. By applying Natural Language
+                        Processing techniques such as TF-IDF vectorization and cosine similarity, the system measures
+                        how closely each candidate’s profile matches the job requirements. This allows recruiters to
+                        quickly identify the most relevant candidates for a particular role.
+                    </p>
+                    <p>
+                        To provide a user-friendly experience, the system includes a FastAPI backend for model inference
+                        and a recruiter dashboard interface that enables uploading resumes, viewing predictions, and
+                        ranking candidates in real time. The platform integrates multiple scoring factors such as
+                        similarity score, predicted job category confidence, and experience extraction to generate a
+                        hybrid ATS ranking score, making candidate evaluation more accurate and efficient.
+                    </p>
+                </div>
+
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-star"></i> Key Features</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle"></i> Resume classification using machine learning models
+                        </li>
+                        <li><i class="fa-solid fa-check-circle"></i> Automatic resume text extraction from uploaded PDF
+                            files</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Multi-resume candidate ranking against job
+                            descriptions</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Hybrid ATS scoring combining similarity,
+                            classification confidence, and experience</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Natural Language Processing using TF-IDF
+                            vectorization</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Cosine similarity for job description matching</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Experience extraction from resume text</li>
+                        <li><i class="fa-solid fa-check-circle"></i> FastAPI REST API for model inference</li>
+                    </ul>
+                </div>
+
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-flask"></i> Technical Approach</h2>
+                    <p>
+                        The system begins with data preprocessing and feature engineering using a dataset containing
+                        more than 2,200 labeled resumes across various job categories. Resume text is cleaned and
+                        transformed using Natural Language Processing techniques. TF-IDF vectorization is applied to
+                        convert textual resume content into numerical feature vectors that can be used by machine
+                        learning models.
+                    </p>
+                    <p>
+                        For classification, the project uses machine learning algorithms such as Random Forest and
+                        XGBoost to predict the job category of a resume. The models are trained and evaluated on the
+                        processed dataset to learn patterns associated with different professional roles. Once trained,
+                        the best performing model is deployed as part of the inference pipeline to classify new resumes
+                        uploaded by users.
+                    </p>
+                    <p>
+                        To enhance recruitment decision-making, the system implements a hybrid candidate ranking
+                        mechanism. Multiple resumes are compared with a job description using TF-IDF cosine similarity
+                        to measure textual relevance. The similarity score is then combined with classification
+                        confidence and extracted experience to produce a final ATS score. This weighted scoring approach
+                        allows the system to rank candidates more intelligently and provide recruiters with an ordered
+                        list of the most suitable applicants.
+                    </p>
+                </div>
+            </div>
+
+            <aside class="proj-sidebar">
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Project Info</h3>
+                    <div class="info-row"><span class="info-label">Status</span><span
+                            class="badge-green">Completed</span></div>
+                    <div class="info-row"><span class="info-label">Type</span><span>Classification · NLP</span></div>
+                    <div class="info-row">
+                        <span class="info-label">Dataset</span>
+                        <a href="https://www.kaggle.com/datasets/gauravduttakiit/resume-dataset" target="_blank"
+                            class="dataset-link">Resume Dataset</a>
+                    </div>
+                    <div class="info-row"><span class="info-label">Year</span><span>2026</span></div>
+                </div>
+
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Technologies</h3>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Python 3.11</span>
+                        <span class="tech-pill">Scikit-learn</span>
+                        <span class="tech-pill">sentence-transformers</span>
+                        <span class="tech-pill">Random Forest</span>
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">XGBoost</span>
+                        <span class="tech-pill">Pandas</span>
+                        <span class="tech-pill">Streamlit</span>
+                        <span class="tech-pill">Docker</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/sahillad05/ai-resume-ranking-system" class="btn btn-primary btn-full reveal"
+                    target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </div>
+            <p class="footer-copy">
+                &copy; 2026 <span class="gradient-text">Sahil Lad</span>. Built with ❤️ using HTML, CSS & JavaScript.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/sahillad05" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sahil-lad-046b58271/" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com" aria-label="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

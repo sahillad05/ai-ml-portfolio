@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Customer Churn Prediction – ML project by Sahil Lad" />
+    <title>Customer Churn Prediction | Sahil Lad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+    <nav id="navbar" class="navbar scrolled">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <a href="../index.html#projects" class="btn btn-secondary" style="padding:10px 20px;font-size:0.85rem;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="proj-hero">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="container proj-hero-inner">
+            <div class="proj-badge-row">
+                <span class="tag">ML</span>
+                <span class="tag">Business Analytics</span>
+                <span class="tag">XGBoost</span>
+            </div>
+            <h1 class="proj-title">Bank Customer Churn<br /><span class="gradient-text">Prediction</span></h1>
+            <p class="proj-subtitle">
+                A predictive analytics solution for identifying at-risk customers, combining gradient
+                boosting with SHAP explainability to deliver interpretable business intelligence.
+            </p>
+            <div class="proj-actions">
+                <a href="https://github.com/sahillad05/bank-customer-churn-mlops" class="btn btn-primary"
+                    target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+                <a href="#overview" class="btn btn-secondary">
+                    <i class="fa-solid fa-eye"></i> Read More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="proj-content" id="overview">
+        <div class="container proj-grid">
+            <div class="proj-main">
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-circle-info"></i> Project Overview</h2>
+                    <p>
+                        Customer churn is a major challenge in the banking industry because losing existing customers
+                        directly affects revenue and long-term growth. Banks need the ability to identify customers who
+                        are likely to leave so they can implement targeted retention strategies. This project focuses on
+                        building a machine learning system that predicts whether a bank customer will churn based on
+                        demographic and financial attributes.
+                    </p>
+                    <p>
+                        The project implements an end-to-end machine learning pipeline that includes data preprocessing,
+                        model training, evaluation, and deployment. Multiple machine learning models are trained and
+                        compared to identify the best performing model. The system automatically selects the best model
+                        based on performance metrics such as F1 score and accuracy.
+                    </p>
+                    <p>
+                        To make the solution practical and interactive, the final model is integrated into a Streamlit
+                        dashboard where users can input customer details and instantly receive churn probability
+                        predictions. The project also follows modern MLOps practices using DVC for pipeline automation
+                        and MLflow for experiment tracking, ensuring reproducibility and scalability.
+                    </p>
+                </div>
+
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-star"></i> Key Features</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle"></i> End-to-end customer churn prediction system</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Automated data preprocessing and feature
+                            transformation</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Multi-model training and comparison</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Automatic best model selection</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Experiment tracking using MLflow</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Reproducible ML pipeline using DVC</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Handling of class imbalance using XGBoost weighting
+                        </li>
+                        <li><i class="fa-solid fa-check-circle"></i> Interactive Streamlit dashboard for real-time
+                            predictions</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Confusion matrix and evaluation metrics
+                            visualization</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Modular and scalable project structure</li>
+                    </ul>
+                </div>
+
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-flask"></i> Technical Approach</h2>
+                    <p>
+                        The project begins with data preprocessing where irrelevant features such as customer
+                        identifiers are removed, and categorical variables like geography and gender are encoded using
+                        One-Hot Encoding. Numerical features are standardized using StandardScaler to ensure better
+                        model performance. The dataset is then split into training and testing sets using stratified
+                        sampling to maintain class distribution.
+                    </p>
+                    <p>
+                        Multiple machine learning models are trained, including Logistic Regression, Random Forest, and
+                        XGBoost. These models are evaluated using performance metrics such as accuracy and F1 score,
+                        with a particular focus on F1 score due to the imbalanced nature of churn datasets. To improve
+                        minority class detection, XGBoost is configured with a dynamically calculated scale_pos_weight
+                        parameter.
+                    </p>
+                    <p>
+                        The pipeline is automated using DVC, allowing reproducible training and evaluation workflows.
+                        MLflow is used to track model experiments and compare performance across different runs. The
+                        best performing model is automatically saved and deployed into a Streamlit-based user interface,
+                        enabling real-time predictions based on user input.
+                    </p>
+                </div>
+            </div>
+
+            <aside class="proj-sidebar">
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Project Info</h3>
+                    <div class="info-row"><span class="info-label">Status</span><span
+                            class="badge-green">Completed</span></div>
+                    <div class="info-row"><span class="info-label">Type</span><span>Classification · MLOps</span></div>
+                    <div class="info-row">
+                        <span class="info-label">Dataset</span>
+                        <a href="https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers"
+                            target="_blank" class="dataset-link">Bank Customer Churn Dataset</a>
+                    </div>
+                    <div class="info-row"><span class="info-label">Year</span><span>2026</span></div>
+                </div>
+
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Technologies</h3>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Python 3.11</span>
+                        <span class="tech-pill">XGBoost</span>
+                        <span class="tech-pill">LightGBM</span>
+                        <span class="tech-pill">Random Forest</span>
+                        <span class="tech-pill">Pandas</span>
+                        <span class="tech-pill">scikit-learn</span>
+                        <span class="tech-pill">MLflow</span>
+                        <span class="tech-pill">DVC</span>
+                        <span class="tech-pill">Streamlit</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">GitHub</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/sahillad05/bank-customer-churn-mlops"
+                    class="btn btn-primary btn-full reveal" target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </div>
+            <p class="footer-copy">
+                &copy; 2026 <span class="gradient-text">Sahil Lad</span>. Built with ❤️ using HTML, CSS & JavaScript.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/sahillad05" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sahil-lad-046b58271/" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com" aria-label="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

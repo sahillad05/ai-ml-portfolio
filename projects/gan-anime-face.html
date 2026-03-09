@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GAN Anime Face Generator – Deep Learning project by Sahil Lad" />
+    <title>GAN Anime Face Generator | Sahil Lad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+    <nav id="navbar" class="navbar scrolled">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <a href="../index.html#projects" class="btn btn-secondary" style="padding:10px 20px;font-size:0.85rem;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="proj-hero">
+        <div class="floating-shapes">
+            <div class="shape shape-3"></div>
+            <div class="shape shape-1"></div>
+        </div>
+        <div class="container proj-hero-inner">
+            <div class="proj-badge-row">
+                <span class="tag">GAN</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">CUDA</span>
+            </div>
+            <h1 class="proj-title">GAN Anime<br /><span class="gradient-text">Face Generator</span></h1>
+            <p class="proj-subtitle">
+                Generating Anime Art using GANs. This project implements DCGAN and CGAN to generate anime faces.
+                DCGAN creates random faces, while CGAN generates faces conditioned on hair and eye color. Both models
+                are trained on the Anime Face Dataset and integrated into a Streamlit app for real-time interactive
+                generation.
+            </p>
+            <div class="proj-actions">
+                <a href="https://github.com/sahillad05/anime-art-gan" class="btn btn-primary" target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+                <a href="#overview" class="btn btn-secondary">
+                    <i class="fa-solid fa-eye"></i> Read More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="proj-content" id="overview">
+        <div class="container proj-grid">
+            <div class="proj-main">
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-circle-info"></i> Project Overview</h2>
+                    <p>
+                        This project focuses on generating realistic images using Generative Adversarial Networks
+                        (GANs). The system implements two different GAN architectures: Deep Convolutional GAN (DCGAN)
+                        and Conditional GAN (CGAN) to generate images automatically. The goal of the project is to
+                        explore how generative deep learning models can learn patterns from datasets and create new
+                        synthetic images that resemble the original data.
+                    </p>
+                    <p>
+                        The DCGAN model is used to generate artistic images by learning visual patterns from a dataset
+                        of art-style images. The generator network learns to create new images from random noise, while
+                        the discriminator network learns to distinguish between real and generated images. Through
+                        adversarial training, the generator gradually improves and produces visually realistic images.
+                    </p>
+                    <p>
+                        The CGAN model extends this concept by allowing users to control the generated output using
+                        conditions. In this project, the conditions include hair color and eye color of anime
+                        characters. By selecting these attributes, the model generates anime faces that match the chosen
+                        features. A Streamlit-based user interface was developed to allow interactive image generation.
+                    </p>
+                </div>
+
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-star"></i> Key Features</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle"></i> Implementation of DCGAN for art-style image
+                            generation</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Implementation of Conditional GAN (CGAN) for
+                            controlled anime face generation</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Ability to generate images based on user-defined
+                            attributes such as hair and eye color</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Interactive Streamlit web interface for generating
+                            images</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Image generation using latent noise vectors</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Model training using deep convolutional neural
+                            networks</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Support for multiple GAN models in a single
+                            application</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Real-time image visualization within the UI</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Efficient model loading using Streamlit caching
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-flask"></i> Technical Approach</h2>
+                    <p>
+                        The project begins with preparing the anime image dataset and extracting relevant labels such as
+                        hair color and eye color from metadata. Images are resized and normalized to make them suitable
+                        for deep learning training. These labels are converted into one-hot encoded condition vectors,
+                        which are used by the Conditional GAN during training.
+                    </p>
+                    <p>
+                        The DCGAN architecture consists of a generator and a discriminator built using convolutional
+                        layers. The generator takes random noise as input and uses transposed convolution layers to
+                        generate images. The discriminator uses convolutional layers to classify images as real or fake.
+                        Both networks are trained together in an adversarial process where the generator tries to fool
+                        the discriminator.
+                    </p>
+                    <p>
+                        For the Conditional GAN, additional information (hair color and eye color) is introduced as a
+                        condition vector. The generator receives both noise and condition input, enabling it to produce
+                        images that match the specified attributes. A Streamlit application integrates both DCGAN and
+                        CGAN models, allowing users to select the model type and generate images interactively through a
+                        web interface.
+                    </p>
+                </div>
+            </div>
+
+            <aside class="proj-sidebar">
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Project Info</h3>
+                    <div class="info-row"><span class="info-label">Status</span><span
+                            class="badge-green">Completed</span></div>
+                    <div class="info-row"><span class="info-label">Type</span><span>Generative AI · GAN</span></div>
+                    <div class="info-row"><span class="info-label">FID Score</span><span class="accent">18.4</span>
+                    </div>
+                    <div class="info-row"><span class="info-label">Output Res</span><span>128×128 px</span></div>
+                    <div class="info-row"><span class="info-label">Year</span><span>2024</span></div>
+                </div>
+
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Technologies</h3>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Python 3.10</span>
+                        <span class="tech-pill">PyTorch</span>
+                        <span class="tech-pill">CUDA</span>
+                        <span class="tech-pill">OpenCV</span>
+                        <span class="tech-pill">NumPy</span>
+                        <span class="tech-pill">torchvision</span>
+                        <span class="tech-pill">Weights & Biases</span>
+                        <span class="tech-pill">TensorFlow</span>
+                        <span class="tech-pill">Google Colab</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/sahillad05/anime-art-gan" class="btn btn-primary btn-full reveal"
+                    target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </div>
+            <p class="footer-copy">
+                &copy; 2026 <span class="gradient-text">Sahil Lad</span>. Built with ❤️ using HTML, CSS & JavaScript.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/sahillad05" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sahil-lad-046b58271/" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com" aria-label="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
