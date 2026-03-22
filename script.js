@@ -270,36 +270,8 @@ function addTilt(card) {
 
 document.querySelectorAll('[data-tilt]').forEach(addTilt);
 
-/* ─── CONTACT FORM → MAILTO (index.html only) ────────────── */
-const form = document.getElementById('contact-form');
-
-if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-    if (!name || !email || !message) return;
-
-    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-    const body = encodeURIComponent(
-      `Hi Sahil,\n\nMy name is ${name} (${email}).\n\n${message}\n\nBest regards,\n${name}`
-    );
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com&su=${subject}&body=${body}`;
-    window.open(gmailUrl, '_blank');
-
-    const btn = document.getElementById('send-btn');
-    if (btn) {
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
-      btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
-        btn.style.background = '';
-        form.reset();
-      }, 3000);
-    }
-  });
-}
+/* ─── CONTACT FORM ────────────── */
+// Form submission is now handled natively via mailto: action in HTML.
 
 /* ─── BACK TO TOP ────────────────────────────────────────── */
 const backToTop = document.getElementById('back-to-top');
