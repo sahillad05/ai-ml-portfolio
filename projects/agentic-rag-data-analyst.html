@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Autonomous Data Scientist Agent – ML project by Sahil Lad" />
+    <title>Autonomous Data Scientist Agent | Sahil Lad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar scrolled">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <a href="../index.html#projects" class="btn btn-secondary" style="padding:10px 20px;font-size:0.85rem;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PROJECT HERO -->
+    <section class="proj-hero">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container proj-hero-inner">
+            <div class="proj-badge-row">
+                <span class="tag">AI</span>
+                <span class="tag">Agent</span>
+            </div>
+            <h1 class="proj-title">Autonomous Data Scientist <br /><span class="gradient-text">Agent</span></h1>
+            <p class="proj-subtitle">
+                An intelligent AI system that analyzes datasets, retrieves knowledge using
+                Agentic RAG, fetches real-time web insights, and executes Python code to
+                generate visualizations and actionable data-driven decisions.
+            </p>
+            <div class="proj-actions">
+                <a href="https://github.com/sahillad05/agentic-rag-data-analyst" class="btn btn-primary"
+                    target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+                <a href="#overview" class="btn btn-secondary">
+                    <i class="fa-solid fa-eye"></i> Read More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main class="proj-content" id="overview">
+        <div class="container proj-grid">
+
+            <!-- LEFT: Main Detail -->
+            <div class="proj-main">
+
+                <!-- Overview -->
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-circle-info"></i> Project Overview</h2>
+                    <p>
+                        This project is an Autonomous Data Scientist Agent that replicates the workflow of a real-world
+                        data scientist using AI. It allows users to upload datasets (CSV) or documents (PDF) and
+                        interact through natural language queries. The system intelligently understands user intent and
+                        performs tasks such as data analysis, document retrieval, and fetching real-time information
+                        from the web, all within a unified interface.
+                    </p>
+                    <p>
+                        Unlike traditional chatbots, this system leverages Agentic RAG (Retrieval-Augmented Generation)
+                        to dynamically combine multiple sources of knowledge, including user data, stored documents, and
+                        live internet data. It can generate Python code for data analysis, execute it, handle errors
+                        automatically, and return meaningful insights along with visualizations. This makes it a
+                        powerful tool for both technical and non-technical users.
+                    </p>
+                    <p>
+                        Built with a modular and scalable architecture, the platform supports multi-user access with
+                        authentication, ensuring that each user has a personalized and isolated experience. With
+                        integrated memory, the agent maintains conversation history and context, enabling intelligent
+                        multi-turn interactions. This project demonstrates the convergence of AI agents, data science
+                        automation, and real-time intelligence in a production-ready system.
+                    </p>
+                </div>
+
+                <!-- Features -->
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-star"></i> Key Features</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle"></i> Autonomous AI Agent with decision-making capability
+                        </li>
+                        <li><i class="fa-solid fa-check-circle"></i>Agentic RAG for dynamic knowledge retrieval</li>
+                        <li><i class="fa-solid fa-check-circle"></i> CSV data analysis using Python (pandas,
+                            visualization)</li>
+                        <li><i class="fa-solid fa-check-circle"></i>PDF document querying using vector search (FAISS)
+                        </li>
+                        <li><i class="fa-solid fa-check-circle"></i>Real-time web search for latest data science
+                            insights</li>
+                        <li><i class="fa-solid fa-check-circle"></i>Automatic Python code generation</li>
+                        <li><i class="fa-solid fa-check-circle"></i>Multi-user authentication with Supabase (private
+                            chat memory)</li>
+                    </ul>
+                </div>
+
+                <!-- Description -->
+                <div class="proj-block reveal">
+                    <h2 class="proj-section-title"><i class="fa-solid fa-flask"></i> Technical Approach</h2>
+                    <p>
+                        The system is built using a modular architecture with a FastAPI backend acting as the central
+                        controller. The frontend provides a user-friendly interface for file uploads and chat
+                        interaction, while the backend manages API requests, authentication, and communication with the
+                        AI model. Supabase is used for user authentication and storing chat history, enabling secure and
+                        personalized user sessions.
+                    </p>
+                    <p>
+                        At the core lies the Agent Controller, which interprets user queries and dynamically decides
+                        which tool or pipeline to activate. Depending on the query, it can trigger the Python execution
+                        engine for data analysis, the RAG pipeline for document retrieval, or the web search module for
+                        real-time information. The FAISS vector database is used to store and retrieve document
+                        embeddings efficiently, ensuring fast and relevant context retrieval.
+                    </p>
+                    <p>
+                        The system integrates a Gemini LLM API for natural language understanding, reasoning, and code
+                        generation. When required, the model generates Python code that is executed in a controlled
+                        environment to perform data analysis and visualization. An iterative error-handling loop ensures
+                        robustness by detecting execution failures, refining the code, and retrying automatically. This
+                        combination of LLM reasoning, tool usage, and feedback loops enables the system to function as a
+                        truly autonomous data science agent.
+                    </p>
+                </div>
+
+            </div><!-- /proj-main -->
+
+            <!-- RIGHT: Sidebar -->
+            <aside class="proj-sidebar">
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Project Info</h3>
+                    <div class="info-row"><span class="info-label">Status</span><span
+                            class="badge-green">Completed</span></div>
+                    <div class="info-row"><span class="info-label">Type</span><span>AI Agent · RAG System</span></div>
+                    <div class="info-row"><span class="info-label">Year</span><span>2026</span></div>
+                </div>
+
+                <div class="sidebar-card reveal">
+                    <h3 class="sidebar-title">Technologies</h3>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Python 3.10</span>
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">Gemini API</span>
+                        <span class="tech-pill">FAISS</span>
+                        <span class="tech-pill">Supabase</span>
+                        <span class="tech-pill">Pandas</span>
+                        <span class="tech-pill">Matplotlib</span>
+                        <span class="tech-pill">Docker</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/sahillad05/agentic-rag-data-analyst" class="btn btn-primary btn-full reveal"
+                    target="_blank">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </aside>
+
+        </div><!-- /proj-grid -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <i class="fa-solid fa-brain logo-icon"></i>
+            </div>
+            <p class="footer-copy">
+                &copy; 2026 <span class="gradient-text">Sahil Lad</span>. Built with ❤️ using HTML, CSS & JavaScript.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/sahillad05" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sahil-lad-046b58271/" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahillad77@gmail.com" aria-label="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
